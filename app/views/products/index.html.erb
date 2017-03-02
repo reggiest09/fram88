@@ -246,10 +246,11 @@
 
 
 
-
         	
           <script type="text/javascript">
               /* magnificPopup */
+   $(document).ready(function($){
+           
     $('.popup-youtube').magnificPopup({
         disableOn: 700,
         type: 'iframe',
@@ -258,15 +259,17 @@
         preloader: false,
         fixedContentPos: false
     });
-          </script>
+    });      </script>
 
           <script type="text/javascript">
               /* youtube background*/
+  $(document).ready(function($){            
     $(".youtube-bg").YTPlayer({
             containment:'.youtube-bg',
             autoPlay:true,
             loop:true,
         });
+       });
           </script>
 
             <script>
