@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require bootstrap-sprockets
+//= require jquery.magnific-popup.min 
 //= require jquery.meanmenu.js
 //= require jquery_ujs
 //= require jquery.scrollUp.min
@@ -23,7 +24,6 @@
 //= require main
 //= require plugins
 //= require jquery.mixitup.min
-//= require jquery.magnific-popup.min 
 //= require jquery.syotimer.min
 //= require turbolinks
 //= require_tree .
