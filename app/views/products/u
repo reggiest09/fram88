@@ -1,0 +1,180 @@
+<section class="our-couses-area pt-90 pb-90">
+            <div class="container">
+              <div class="row">
+                        <!-- Start section title -->
+                <div class="col-sm-12">
+                  <div class="section-title text-center">
+                    <h2>Instafamous <span>The Movie</span></h2>
+                    <img src="img/title-bottom.png" alt="">
+                    <p>We need to raise $20,000 in order to bring our idea to life, but we cant do it by ourselves. We need you to reach deep in your pockets.</p>
+                  </div>
+                </div>
+                        <div class="space-50">&nbsp;</div>
+                        <!-- End section title -->
+                <div class="couses">
+                            <!-- Start single couses -->
+                  <div class="col-sm-4">
+                    <div class="single-couses">
+                      <div class="single-couses-image-text">
+                        <div class="couses-image">
+                         <%= image_tag('six.png', alt:"") %>
+                          <!-- <img src="img/couses/six.png" alt=""> -->
+                        </div>
+                        <div class="couses-text text-center">
+                          <h3>Children to get education</h3>
+                          <p>Lorem ipsum dolor sit amet, onsectetur adipiscing cons ectetur nulla. Sed at ullamcorper risus.</p>
+                        </div>
+                      </div>
+                      <div class="couses-button-and-price">
+                        <div class="couses-button">
+                          <a href="" class="btn-md bo-ra-5">Donate</a>
+                        </div>
+                        <div class="couses-price">
+                          <h5>$ 25,000 / $ 50,000</h5>
+                        </div>
+                                        <div class="space-50">&nbsp;</div>
+                      </div>
+                    </div>
+                  </div>
+                            <!-- End single couses -->
+                            <!-- Start single couses -->
+                            <div class="col-sm-4">
+                                <div class="single-couses">
+                                    <div class="single-couses-image-text">
+                                        <div class="couses-image">
+                                      <%= image_tag('five.png', alt:"") %>
+
+                                            <!-- <img src="img/couses/five.png" alt=""> -->
+                                        </div>
+                                        <div class="couses-text text-center">
+                                            <h3>Bring Electric and Light</h3>
+                                            <p>Lorem ipsum dolor sit amet, onsectetur adipiscing cons ectetur nulla. Sed at ullamcorper risus.</p>
+                                        </div>
+                                    </div>
+                                    <div class="couses-button-and-price">
+                                        <div class="couses-button">
+                                            <a href="" class="btn-md bo-ra-5">Donate</a>
+                                        </div>
+                                        <div class="couses-price">
+                                            <h5>$ 45,000 / $ 90,000</h5>
+                                        </div>
+                                        <div class="space-50">&nbsp;</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End single couses -->
+                            <!-- Start single couses -->
+                            <div class="col-sm-4">
+                                <div class="single-couses">
+                                    <div class="single-couses-image-text">
+                                        <div class="couses-image">
+                                        <%= image_tag('four.png', alt:"") %>
+                                            <!-- <img src="img/couses/four.png" alt=""> -->
+                                        </div>
+                                        <div class="couses-text text-center">
+                                            <h3>Water carrier items</h3>
+                                            <p>Lorem ipsum dolor sit amet, onsectetur adipiscing cons ectetur nulla. Sed at ullamcorper risus.</p>
+                                        </div>
+                                    </div>
+                                    <div class="couses-button-and-price">
+                                        <div class="couses-button">
+                                            <a href="" class="btn-md bo-ra-5">Donate</a>
+                                        </div>
+                                        <div class="couses-price">
+                                            <h5>$ 35,000 / $ 70,000</h5>
+                                        </div>
+                                        <div class="space-50">&nbsp;</div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            
+                </div>
+              </div>
+                   <div class="row">
+                    <div class="couses">
+                            <!-- Start single couses -->
+                            <div class="col-sm-4">
+                                <div class="single-couses">
+                                    <div class="single-couses-image-text">
+                                        <div class="couses-image">
+                                        <%= image_tag('one.png', alt:"") %>
+                                            <!-- <img src="img/couses/one.png" alt=""> -->
+                                        </div>
+                                        <div class="couses-text text-center">
+                                            <h3>Children to get education</h3>
+                                            <p>Lorem ipsum dolor sit amet, onsectetur adipiscing cons ectetur nulla. Sed at ullamcorper risus.</p>
+                                        </div>
+                                    </div>
+                                    <div class="couses-button-and-price">
+                                        <div class="couses-button">
+                                            <a href="" class="btn-md bo-ra-5">Donate</a>
+                                        </div>
+                                        <div class="couses-price">
+                                            <h5>$ 25,000 / $ 50,000</h5>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End single couses -->
+                            <!-- Start single couses -->
+                            <div class="col-sm-4">
+                                <div class="single-couses">
+                                    <div class="single-couses-image-text">
+                                        <div class="couses-image">
+                                        <%= image_tag('two.png', alt:"") %>
+                                            <!-- <img src="img/couses/two.png" alt=""> -->
+                                        </div>
+                                        <div class="couses-text text-center">
+                                            <h3>Bring Electric and Light</h3>
+                                            <p>Lorem ipsum dolor sit amet, onsectetur adipiscing cons ectetur nulla. Sed at ullamcorper risus.</p>
+                                        </div>
+                                    </div>
+                                    <div class="couses-button-and-price">
+                                        <div class="couses-button">
+                                            <a href="" class="btn-md bo-ra-5">Donate</a>
+                                        </div>
+                                        <div class="couses-price">
+                                            <h5>$ 45,000 / $ 90,000</h5>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End single couses -->
+                            <!-- Start single couses -->
+                            <div class="col-sm-4">
+                                <div class="single-couses">
+                                    <div class="single-couses-image-text">
+                                        <div class="couses-image">
+                                            <!-- <img src="img/couses/three.png" alt=""> -->
+                                            <%= image_tag('three.png', alt:"") %>
+                                        </div>
+                                        <div class="couses-text text-center">
+                                            <h3>Water carrier items</h3>
+                                            <p>Lorem ipsum dolor sit amet, onsectetur adipiscing cons ectetur nulla. Sed at ullamcorper risus.</p>
+                                        </div>
+                                    </div>
+                                    <div class="couses-button-and-price">
+                                        <div class="couses-button">
+                                            <a href="" class="btn-md bo-ra-5">Donate</a>
+                                        </div>
+                                        <div class="couses-price">
+                                            <h5>$ 35,000 / $ 70,000</h5>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            
+                        </div>
+
+
+                   </div>
+            </div>
+          </section>

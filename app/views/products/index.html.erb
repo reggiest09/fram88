@@ -1,0 +1,297 @@
+<section class="youtube-area youtube-bg height-100vh" data-property="{videoURL:'cPXx5qkhl0U',}">
+                <div class="youtube-bg-overlay">
+                    <div class="youtube-text text-center">
+                        <h1 class="title1 wow zoomIn animated" data-wow-duration="1s" data-wow-delay="300ms" style="visibility: visible; animation-duration: 1s; animation-delay: 300ms; animation-name: zoomIn;">We need to raise $20,000</h1>
+                        <p class="wow zoomIn animated" data-wow-duration="1s" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1s; animation-delay: 600ms; animation-name: zoomIn;">in order to bring our idea to life, but we cant do it by ourselves. We need you to reach deep in your pockets.</p>
+                        <div class="slider-button-area wow zoomIn animated" data-wow-duration="1s" data-wow-delay="900ms" style="visibility: visible; animation-duration: 1s; animation-delay: 900ms; animation-name: zoomIn;">
+                            <!-- <a href="index-youtube-video.html#" class="btn-lg">DONATE NOW</a>
+                            <a href="index-youtube-video.html#" class="btn-lg">LEARN MORE</a> -->
+                        </div> 
+                    </div>
+                </div>
+            </section>
+          <section class="our-couses-area pt-90 pb-90">
+            <div class="container">
+              
+              <div class="row">
+                        <!-- Start section title -->
+                <div class="col-sm-12">
+                  <div class="section-title text-center">
+                    <h2>Instafamous <span>The Movie</span></h2>
+                    <%= image_tag("title-bottom.png", alt: "")%>
+                    <p>We need to raise $20,000 in order to bring our idea to life, but we cant do it by ourselves. We need you to reach deep in your pockets.</p>
+                  </div>
+                </div>
+                        <div class="space-50">&nbsp;</div>
+                       <!-- End section title -->
+                <div class="single-couses">
+                            <!-- Start single couses -->
+                <% @products.each do |product| %> 
+                  <div class="col-sm-4">
+                 
+                    <div class="single-couses">
+
+                      <div class="single-couses-image-text">
+                      
+                        <div class="couses-image">
+                         <%= link_to image_tag(product.image.url, alt: ""), product_path(product) %>
+                        <div class="couses-text text-center">
+                          <h3><%= product.title%></h3>
+                          <p><%= product.subtitle%></p>
+                        </div>
+                      </div>
+                      <div class="couses-button-and-price">
+                        <div class="couses-button">
+                          <a><%= link_to 'Donate', product_path(product), class: "btn-md bo-ra-5"%>  
+                        </div>
+
+                        <div class="couses-price">
+                          <h5><%=  number_to_currency(product.price) %></h5>
+                          
+                        </div>
+                       
+                      </div>
+                       
+                    </div>
+
+                  </div>
+
+                <div class="space-50">&nbsp;</div>       <!-- End single couses -->
+                             <!-- Start single couses -->      
+                            
+                </div>
+               <% end %>
+              </div>
+            
+           
+            </div>
+
+          </section>
+
+         <!-- end of payment options -->
+
+
+
+
+                   <section class="help-us-area pt-80 pb-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="section-title-style-two text-center">
+                                <h2>HOW CAN YOU HELP US?</h2>
+                                <p>We need to raise $20,000 in order to bring our idea to life, but we cant do it by ourselves. We need you to reach deep in your pockets.. </p>
+                            </div>
+                        </div>
+                        <div class="help-us-content-area">
+                            <!-- Start single help -->
+                            <div class="col-sm-4">
+                                <div class="single-help">
+                                    <div class="help-icon">
+                                        <i class="fa fa-university" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="help-text">
+                                        <h3>Donate</h3>
+                                        <p>You can make a donation.</p>
+                                        <!-- <a href="" class="btn-sm bo-ra-3">Learn More</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End single help -->
+                            <!-- Start single help -->
+                            <div class="col-sm-4">
+                                <div class="single-help">
+                                    <div class="help-icon">
+                                        <i class="fa fa-money" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="help-text">
+                                        <h3>Funrising</h3>
+                                        <p>You can help us fundraise.</p>
+                                        <!-- <a href="" class="btn-sm bo-ra-3">Learn More</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End single help -->
+                            <!-- Start single help -->
+                            <div class="col-sm-4">
+                                <div class="single-help">
+                                    <div class="help-icon">
+                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="help-text">
+                                        <h3>Volunteer</h3>
+                                        <p>You can volunteer and help spread the word about Instafamous The Movie.</p>
+                                        <!-- <a href="" class="btn-sm bo-ra-3">Learn More</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End single help -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- End help us area -->
+            <!-- Start our gallery -->
+            
+            <!-- End our gallery -->
+            <!-- Start countdown area -->
+            <section class="countdown-area pt-60 pb-60">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-5 col-md-4">
+                            <div class="countdown-side-area">
+                                <div class="countdown-icon">
+                                    <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="countdown-text">
+                                    <h3>Up comming event</h3>
+                                    <p>SCHOOL OF CRITIVITY</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-7 col-md-8">
+                            <div class="count-down">
+                                <div id="simple_timer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End countdown area -->
+            <!-- Start our volunteers area -->
+            <section class="our-volunteers-area pt-90 pb-90">
+                <div class="container">
+                    <div class="row">
+                        <!-- Start section title -->
+                        <div class="col-sm-12">
+                            <div class="section-title text-center">
+                                <h2>Instafamous <span>Team</span></h2>
+                                <%= image_tag("title-bottom.png", alt: "")%>
+                                
+                                <p>Some of the people who have participates <br>.</p>
+                            </div>
+                        </div>
+                        <!-- End section title -->
+                        <div class="our-volunteers">
+                            <!-- Start single volunteer -->
+                            <div class="col-sm-3">
+                                <div class="single-volunteer">
+                                    <div class="volunteer-image-and-social">
+                                       <%= image_tag("vol.png")%>
+                                        <!-- <img src="img/volunteers/vol.png" alt=""> -->
+                                        <div class="volunteer-social">
+                                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="volunteer-title text-center">
+                                        <h5>Jamal Simmons</h5>
+                                        <p>Producer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End single volunteer -->
+                            <!-- Start single volunteer -->
+                            <div class="col-sm-3">
+                                <div class="single-volunteer">
+                                    <div class="volunteer-image-and-social">
+                                        <%= image_tag("vol.png")%>
+                                        <div class="volunteer-social">
+                                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="volunteer-title text-center">
+                                        <h5>Jamal Simmons</h5>
+                                        <p>Producer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End single volunteer -->
+                            <!-- Start single volunteer -->
+                            <div class="col-sm-3">
+                                <div class="single-volunteer">
+                                    <div class="volunteer-image-and-social">
+                                        <%= image_tag("vol.png")%>
+                                        <div class="volunteer-social">
+                                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="volunteer-title text-center">
+                                        <h5>Jamal Simmons</h5>
+                                        <p>Producer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End single volunteer -->
+                            <!-- Start single volunteer -->
+                            <div class="col-sm-3">
+                                <div class="single-volunteer">
+                                    <div class="volunteer-image-and-social">
+                                        <%= image_tag("vol.png")%>
+                                        <div class="volunteer-social">
+                                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="volunteer-title text-center">
+                                        <h5>Jamal Simmons</h5>
+                                        <p>Producer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End single volunteer -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        	
+          <script type="text/javascript">
+              /* magnificPopup */
+    $('.popup-youtube').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+    });
+          </script>
+
+          <script type="text/javascript">
+              /* youtube background*/
+    $(".youtube-bg").YTPlayer({
+            containment:'.youtube-bg',
+            autoPlay:true,
+            loop:true,
+        });
+          </script>
+
+            <script>
+          new WOW().init();
+        </script>
+
+
