@@ -62,7 +62,7 @@
       document.getElementById('btn-buy').addEventListener('click', function(e) {
         handler.open({
           name: '<%= @product.title %>',
-          description: 'Buy this item for ($<%= @product.price %>)',
+          description: 'Donation amount is ($<%= @product.price %>)',
           amount: document.getElementById("amount").value
         });
         e.preventDefault();
