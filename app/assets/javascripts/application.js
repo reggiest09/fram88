@@ -11,19 +11,18 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require bootstrap-sprockets
-//= require plugins
-//= require jquery.magnific-popup.min 
-//= require jquery.meanmenu.js
 //= require jquery_ujs
-//= require jquery.scrollUp.min
-//= require wow
 //= require appear
 //= require heading
 //= require knob
-//= require main
 //= require jquery.mixitup.min
+//= require jquery.magnific-popup.min
+//= require jquery.meanmenu.js
 //= require jquery.syotimer.min
+//= require wow
+//= require jquery.scrollUp.min
+//= require plugins
+//= require main
 //= require turbolinks
 //= require_tree .
