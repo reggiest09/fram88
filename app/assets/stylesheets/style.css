@@ -2144,27 +2144,7 @@ line-height: 36px;}
     width: 100%;
     height: 100%;
 }*/
-center{
-    text-align: center;
-}
-.videowrapper { 
-        float: none;
-        clear: both;
-        width: 1080;
-        position: relative;
-        padding-bottom: 56.25%;
-        padding-top: 25px;
-        height: 0;
-    margin: 0 auto;
-    }
-    .videowrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    
-    }
+
 
 
     
