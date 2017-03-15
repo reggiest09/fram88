@@ -9,9 +9,9 @@ root 'products#index'
 
 
 
-resources :products, only: [:index, :show]
+
   resources :charges
-  resources :purchases, only: [:show]
+ 
 
 
 
