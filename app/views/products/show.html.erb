@@ -33,42 +33,8 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipi elit. Cras mollis ligula mauris, vitae porttitor nunc maximus Integer fringilla place acLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras  mauris, vitae porttitor nunc maximus a. Integer fringilla placerat leo ac bibendum. Quisque et neque eu magna cula pellentesque. Nam volutpat scelerisque tellus, vel ultrices arcu blandit vel. Curabitur semper cursus nulla, et accumsan nisl eleifend a. Integer vitae nisi quis arcu vehicula pharetra ac blandit purus. </p>
                                 <p>Etiam ut erat et nisi pulvinar accumsan. Curabitur imperdiet at sem vel elementum. Sed eget vestibulum purus. Quisque rhoncus leo vitae sem scelerisque varius.</p>
                                 <div class="col-md-6">
-      <h3 style="text-align:center"><b> <%= number_to_currency(@product.price)%></b></h3>
-      <%= form_tag charges_path, id:'chargeForm' do %>
-
-      <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-      <% end %>
-
-      <%= hidden_field_tag 'stripeToken' %>
-      <%= hidden_field_tag 'amount', @product.price_in_cents %>
-      <%= hidden_field_tag 'product_id', @product.id %>
-      <%= hidden_field_tag 'stripeEmail' %>
-      <button id="btn-buy" type="button" class="btn btn-success btn-lg btn-block", data:{ no_turbolink: true }>
-        Make Your Donation
-      </button>
       
-      <script>
-      var handler = StripeCheckout.configure({
-        key: '<%= Rails.configuration.stripe[:publishable_key] %>',
-        token: function(token, arg) {
-          document.getElementById("stripeToken").value = token.id;
-          document.getElementById("stripeEmail").value = token.email;
-          document.getElementById("chargeForm").submit();
-        }
-      });
-      document.getElementById('btn-buy').addEventListener('click', function(e) {
-        handler.open({
-          name: '<%= @product.title %>',
-          description: 'Donation amount is ($<%= @product.price %>)',
-          amount: document.getElementById("amount").value
-        });
-        e.preventDefault();
-      })
-      </script>
-      <% end %>
+     
     </div>
                             
 

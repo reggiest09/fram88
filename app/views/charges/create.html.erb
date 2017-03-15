@@ -1,1 +1,53 @@
-Thank You
+
+     <section class="page-title-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title text-center">
+                                
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End page title -->
+            <!-- Start about content area -->
+            <section class="about-content-area pt-90 pb-60">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="about-content">
+                                <!-- Start section title -->
+                                <div class="section-title text-center">
+                                    <h2>Thank <span>You</span></h2>
+                                    <%= image_tag 'title-bottom.png'%>
+                                    
+                                </div>
+                                <!-- End section title -->
+                                
+                             <h2>Your donation of <strong><%= number_to_currency(@amount * 0.01) %></strong>
+                              has been received.</h2>
+                                <p>.</p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="about-image">
+                            <%= image_tag 'about.png', alt:""%>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+

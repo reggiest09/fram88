@@ -2144,3 +2144,17 @@ line-height: 36px;}
     width: 100%;
     height: 100%;
 }*/
+.stripe-button-el {
+  width: 200px;
+  border-radius: 0;
+  background-image: none;
+  background-color: #0AAAA0;
+}
+
+.stripe-button-el span {
+  font-family: arial;
+  font-size: 20px;
+  border-radius: 0;
+  background-image: none;
+  background-color: #0AAAA0;
+}

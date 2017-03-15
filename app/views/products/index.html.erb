@@ -4,67 +4,176 @@
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cPXx5qkhl0U?autoplay=1"></iframe>
   </div>
 </div>
+      <div class="space-200">&nbsp;</div>
+      <div class="donet-error-page text-center">
+                                <h3>Want to donate? <span>It’s time to show your humimility</span></h3>
+                                  <%= image_tag 'title-bottom.png', alt:""%>
+                            </div>
+
+                
+
+     <section class="up-comming-area  pt-90 pb-60">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="up-comming-events">
+                                <!-- Start single event -->
+                               
+                                <!-- End single event -->
+                                 <!-- Start single event -->
+                               
+                                <!-- End single event -->
+                                 <!-- Start single event -->
+                             
+                                <!-- End single event -->
+                                 <!-- Start single event -->
+                                <div class="single-event mb-90 row">
+                                    <div class="col-sm-5">
+                                        <div class="event-image">
+                                        <%= image_tag 'fam.png', alt: ""%>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <div class="event-text">
+                                            <h3><a href="events.html#">We need your help to raise</a></h3>
+                                            <div class="event-time-and-place">
+                                                <span class="ev-place"> <i class="fa fa-money" aria-hidden="true"></i> Our Goal is 30,000</span>
 
 
+                                                <span class="ev-time"> <i class="fa fa-clock-o" aria-hidden="true"></i> Before June 13th 2017</span>
+                                                
+                                            </div>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                                            <!-- <a class="btn-md bo-ra-5" href="events.html#">Donate</a> -->
+                                            <!-- <a class="waves-effect waves-light" href="events.html#"> -->
 
-          <section class="our-couses-area pt-90 pb-90">
-            <div class="container">
-              
-              <div class="row">
-                        <!-- Start section title -->
-                <div class="col-sm-12">
-                  <div class="section-title text-center">
-                    <h2>Instafamous <span>The Movie</span></h2>
-                    <%= image_tag("title-bottom.png", alt: "")%>
-                    <p>We need to raise $20,000 in order to bring our idea to life, but we cant do it by ourselves. We need you to reach deep in your pockets.</p>
-                  </div>
-                </div>
-                        <div class="space-50">&nbsp;</div>
-                       <!-- End section title -->
-                <div class="single-couses">
-                            <!-- Start single couses -->
-                <% @products.each do |product| %> 
-                  <div class="col-sm-4">
-                 
-                    <div class="single-couses">
+  <%= form_tag charges_path do %>
+  <div id="error_explanation">
+    <% if flash[:error].present? %>
+      <p><%= flash[:error] %></p>
+    <% end %>
+  </div>
+  <article>
+    <%= label_tag(:amount, 'Donation Amount:') %>
+    <%= text_field_tag(:amount) %>
+  </article>
+  <article>
+    <%= hidden_field_tag(:stripeToken) %>
+  </article>
+  <button id='donateButton' class="btn-md bo-ra-5">
+  <span>Donate</span>
+<% end %>
 
-                      <div class="single-couses-image-text">
-                      
-                        <div class="couses-image">
-                         <%= link_to image_tag(product.image.url, alt: ""), product_path(product) %>
-                        <div class="couses-text text-center">
-                          <h3><%= product.title%></h3>
-                          <p><%= product.subtitle%></p>
-                        </div>
-                      </div>
-                      <div class="couses-button-and-price">
-                        <div class="couses-button">
-                          <a><%= link_to 'Donate', product_path(product), class: "btn-md bo-ra-5"%>  
-                        </div>
+<script src="https://checkout.stripe.com/checkout.js"></script>
 
-                        <div class="couses-price">
-                          <h5><%=  number_to_currency(product.price) %></h5>
-                          
-                        </div>
-                       
-                      </div>
-                       
-                    </div>
+<script>
+var handler = StripeCheckout.configure({
+  key: '<%= Rails.configuration.stripe[:publishable_key] %>',
+  locale: 'auto',
+  name: 'Ragnar\'s Redoubt',
+  description: 'One-time donation',
+  token: function(token) {
+    $('input#stripeToken').val(token.id);
+    $('form').submit();
+  }
+});
 
-                  </div>
+$('#donateButton').on('click', function(e) {
+  e.preventDefault();
 
-                <div class="space-50">&nbsp;</div>       <!-- End single couses -->
-                             <!-- Start single couses -->      
+  $('#error_explanation').html('');
+
+  var amount = $('input#amount').val();
+  amount = amount.replace(/\$/g, '').replace(/\,/g, '')
+
+  amount = parseFloat(amount);
+
+  if (isNaN(amount)) {
+    $('#error_explanation').html('<p>Please enter a valid amount in USD ($).</p>');
+  }
+  else if (amount < 1.00) {
+    $('#error_explanation').html('<p>Donation amount must be at least $1.</p>');
+  }
+  else {
+    amount = amount * 100; // Needs to be an integer!
+    handler.open({
+      amount: Math.round(amount)
+    })
+  }
+});
+
+// Close Checkout on page navigation
+$(window).on('popstate', function() {
+  handler.close();
+});
+</script>                                          
+
+                                            
+  
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End single event -->
+                            </div>
                             
+                        </div>
+                    </div>
                 </div>
-               <% end %>
-              </div>
+            </section>
             
-           
-            </div>
-
-          </section>
-
+            <!-- End up comming area -->
+            <!-- Start brand logo area -->
+            <section class="brand-logo-area pb-90">
+                <div class="container">
+                    <div class="row">
+                        <!-- Start section title -->
+                        <div class="col-sm-12">
+                            <div class="section-title text-center">
+                                <h2>Support <span>Veterans</span></h2>
+                                <%= image_tag 'title-bottom.png', alt:""%>
+                            </div>
+                        </div>
+                        <!-- End section title -->
+                        <!-- Start brand logo -->
+                        <div class="brand-logo">
+                            <div class="col-sm-2">
+                                <div class="b-logo">
+                                    <%= image_tag 'navy.png', alt:""%>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="b-logo">
+                                    <%= image_tag 'army.png', alt:""%>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="b-logo">
+                                    <%= image_tag 'airforce.png', alt:""%>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="b-logo">
+                                    <%= image_tag 'df.png', alt:""%>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="b-logo">
+                                   <%= image_tag 'coastguard.png', alt:""%>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="b-logo">
+                            <%= image_tag 'marine.png', alt:""%>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End brand logo -->
+                    </div>
+                </div>
+            </section>
          <!-- end of payment options -->
 
 
