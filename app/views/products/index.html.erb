@@ -72,7 +72,7 @@
 var handler = StripeCheckout.configure({
   key: '<%= Rails.configuration.stripe[:publishable_key] %>',
   locale: 'auto',
-  name: 'Ragnar\'s Redoubt',
+  name: 'Instafamous The Movie',
   description: 'One-time donation',
   token: function(token) {
     $('input#stripeToken').val(token.id);
