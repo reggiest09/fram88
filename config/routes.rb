@@ -9,7 +9,8 @@ root 'products#index'
 
 
 
-
+resources :products
+resources :purchases
   resources :charges
  
 
