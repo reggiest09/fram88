@@ -2126,6 +2126,10 @@ line-height: 36px;}
   margin: 50px 0;
   line-height: 0;
 }
+.space-20 {
+  margin: 20px 0;
+  line-height: 0;
+}
 
 .space-200 {
   margin: 100px 0;

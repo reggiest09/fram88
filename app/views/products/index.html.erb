@@ -6,64 +6,70 @@
 </div>
       <div class="space-200">&nbsp;</div>
       <div class="donet-error-page text-center">
-                                <h3>Want to donate? <span>It’s time to show your humimility</span></h3>
+     
+                                <h3> Instafamous The Movie Crowd Fund  <span>Perks</span></h3>
                                   <%= image_tag 'title-bottom.png', alt:""%>
                             </div>
-
-                
-
-     <section class="up-comming-area  pt-90 pb-60">
+     <div class="space-20">&nbsp;</div>
+                            <div class="page-damy-content pt-90 pb-90">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="up-comming-events">
-                                <!-- Start single event -->
-                               
-                                <!-- End single event -->
-                                 <!-- Start single event -->
-                               
-                                <!-- End single event -->
-                                 <!-- Start single event -->
-                             
-                                <!-- End single event -->
-                                 <!-- Start single event -->
-                                <div class="single-event mb-90 row">
-                                    <div class="col-sm-5">
-                                        <div class="event-image">
-                                        <%= image_tag 'fam.png', alt: ""%>
-                                            
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <div class="event-text">
-                                            <h3><a href="events.html#">We need your help to raise</a></h3>
-                                            <div class="event-time-and-place">
-                                                <span class="ev-place"> <i class="fa fa-money" aria-hidden="true"></i> Our Goal is 30,000</span>
+                           <h2>$20 Donation</h2>
+                            <p>Thank you and we’ll follow you on all of our social media profiles, you will get access to the, Behind the scenes, facebook-live video.geMaker including versions of.</p>
+                        </div>
 
-
-                                                <span class="ev-time"> <i class="fa fa-clock-o" aria-hidden="true"></i> Before June 13th 2017</span>
-                                                
-                                            </div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-                                            <!-- <a class="btn-md bo-ra-5" href="events.html#">Donate</a> -->
-                                            <!-- <a class="waves-effect waves-light" href="events.html#"> -->
-
-  <%= form_tag charges_path do %>
+                        <div class="col-sm-12">
+                        <h2>$50 Donation</h2>
+                            <p>(All the above)plus: Name or social media handle in the sponsor credits</p>
+                        </div>
+                        <div class="col-sm-12">
+                           <h2>$100 Donation </h2>
+                            <p>(All the above) plus: You will get your name and social media handle in the sponsor Credits, along with your submitted headshot. Plus, receive admission for 2 to the movie premiere and after party. .</p>
+                        </div>
+                        <div class="col-sm-12">
+                        <h2>$500 Donation</h2>
+                            <p>(All the above) plus: Personal thank you video from one of the main cast, walk the red carpet, VIP admission (meet and great with the cast) for you and a guest to the premiere and after party. .</p>
+                            
+                        </div>
+                        <div class="col-sm-12">
+                        <h2>$1000 Donation</h2>
+                            <p>(All the above) plus: Be an honorary member of “Frame 88” Come to the set on a shoot day of your choice where you will be treated like one of the family. You can also take Pictures with the cast and crew for that day. Acknowledgment of your donation at the movie premiere..</p>
+                          
+                        </div>
+                        <div class="col-sm-12">
+                        <h2>$5000 Donation</h2>
+                            <p>(All the above) plus: You will receive a Producers credit for the movie and an opportunity to be an investor for the following movie production. Acknowledgment of your donation at the movie premiere..</p>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-20">&nbsp;</div>
+         <section class="error-page-donate pt-90 pb-90">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="donet-error-page text-center">
+                                <h3>Want to donate? <span>It’s time to show your huminity</span></h3>
+                                <!-- <a href="" class="btn-md bo-ra-5">Donate Now</a> -->
+                                <%= form_tag charges_path do %>
   <div id="error_explanation">
     <% if flash[:error].present? %>
       <p><%= flash[:error] %></p>
     <% end %>
   </div>
-  <article>
-    <%= label_tag(:amount, 'Donation Amount:') %>
+ <div>
+    <%=label_tag(:amount, 'Donation Amount:') %>
     <%= text_field_tag(:amount) %>
-  </article>
+ </div>
   <article>
     <%= hidden_field_tag(:stripeToken) %>
   </article>
-  <button id='donateButton' class="btn-md bo-ra-5">
-  <span>Donate</span>
+ <div class="form-button">
+  <button id='donateButton'>
+  <span>Donate</span></button>
+  </div>
 <% end %>
 
 <script src="https://checkout.stripe.com/checkout.js"></script>
@@ -110,19 +116,14 @@ $(window).on('popstate', function() {
 });
 </script>                                          
 
-                                            
-  
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End single event -->
                             </div>
-                            
                         </div>
                     </div>
                 </div>
             </section>
+
+                <div class="space-200">&nbsp;</div>
+
             
             <!-- End up comming area -->
             <!-- Start brand logo area -->
@@ -175,6 +176,7 @@ $(window).on('popstate', function() {
                 </div>
             </section>
          <!-- end of payment options -->
+
 
 
 
