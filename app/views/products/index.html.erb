@@ -84,7 +84,6 @@
 <% end %>
 
 <script src="https://checkout.stripe.com/checkout.js"></script>
-
 <script>
 var handler = StripeCheckout.configure({
   key: '<%= ENV['PUBLISHABLE_KEY'] %>',
@@ -96,6 +95,7 @@ var handler = StripeCheckout.configure({
     $('form').submit();
   }
 });
+
 
 $('#donateButton').on('click', function(e) {
   e.preventDefault();
