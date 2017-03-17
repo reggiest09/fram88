@@ -87,7 +87,7 @@
 
 <script>
 var handler = StripeCheckout.configure({
-  key: '<%= Rails.configuration.stripe[:publishable_key] %>',
+  key: '<%= ENV['PUBLISHABLE_KEY'] %>',
   locale: 'auto',
   name: 'Instafamous The Movie',
   description: 'One-time donation',
