@@ -86,7 +86,7 @@
 <script src="https://checkout.stripe.com/checkout.js"></script>
 <script>
 var handler = StripeCheckout.configure({
-  key: '<%= ENV['PUBLISHABLE_KEY'] %>',
+  key: '<%= ENV['stripe_publishable_key'] %>',
   locale: 'auto',
   name: 'Instafamous The Movie',
   description: 'One-time donation',
